@@ -16,7 +16,8 @@ from openai import AzureOpenAI
 
 client = AzureOpenAI(
   azure_endpoint = "https://team43-openai.openai.azure.com/", 
-  api_key=os.getenv("AZURE_OPENAI_KEY"),  
+  #api_key=os.getenv("AZURE_OPENAI_KEY"),  
+  api_key="01fe36704035437aa74cfbf4c4d86124",
   api_version="2024-02-15-preview"
 )
 
@@ -36,7 +37,7 @@ completion = client.chat.completions.create(
 #
 
 # Load a PDF document and split it into sections
-loader = PyPDFLoader("data/testpdf.pdf")
+loader = PyPDFLoader("../test1.pdf")
 docs = loader.load_and_split()
 
 # Initialize the OpenAI chat model
