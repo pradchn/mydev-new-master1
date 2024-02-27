@@ -37,7 +37,7 @@ completion = client.chat.completions.create(
 #
 
 # Load a PDF document and split it into sections
-loader = PyPDFLoader("../test1.pdf")
+loader = PyPDFLoader("../data/testpdf.pdf")
 docs = loader.load_and_split()
 
 # Initialize the OpenAI chat model
